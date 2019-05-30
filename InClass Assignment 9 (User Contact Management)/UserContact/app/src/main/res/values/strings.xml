@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">User Contact</string>
+    <string name="String_UserName" />
+    <string name="String_Password" />
+    <string name="String_Login">Login</string>
+    <string name="String_SignUp">Sign Up</string>
+    <string name="String_FirstName" />
+    <string name="String_LastName" />
+    <string name="String_Email" />
+    <string name="String_PasswordSign" />
+    <string name="String_RePassword" />
+    <string name="String_Cancel">Cancel</string>
+    <string name="String_CreateNewContact">Create New Contact</string>
+    <string name="String_NameContact" />
+    <string name="String_EmailContact" />
+    <string name="String_Phone" />
+    <string name="String_Submit">Submit</string>
+    <string name="String_Name" >Name</string>
+    <string name="String_PhoneList">Phone</string>
+    <string name="String_EmailList">Email</string>
+</resources>

@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">NewsAPI</string>
+    <string name="action_settings">Settings</string>
+    <string name="String_ShowCategories" >Show Categories</string>
+    <string name="String_Go">GO</string>
+    <string name="String_Loading">Loading...</string>
+    <string name="String_Title">Title</string>
+    <string name="String_PublishedAt">Published At</string>
+    <string name="String_Description">Description</string>
+    <string name="String_counter">Counter</string>
+</resources>

@@ -1,0 +1,335 @@
+{
+	"info": {
+		"_postman_id": "9cf53003-16ef-417b-b9b3-b844737c19fa",
+		"name": "Note API AWS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "/api/auth/register",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Sakib",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "sakibnm@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "alu123",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "ec2-3-91-77-16.compute-1.amazonaws.com:3000/api/auth/register",
+					"host": [
+						"ec2-3-91-77-16",
+						"compute-1",
+						"amazonaws",
+						"com"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/auth/me",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-access-token",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjYWI3ZTc0ZDQ2ZWQ3MGNmNDA5NzY3NCIsImlhdCI6MTU1NDc0MjkwMCwiZXhwIjoxNTU0ODI5MzAwfQ.I9hZeLK3mWD_78nLJCroHm8xem4a8YKpgq1JuhI4eq8"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "ec2-3-91-77-16.compute-1.amazonaws.com:3000/api/auth/me",
+					"host": [
+						"ec2-3-91-77-16",
+						"compute-1",
+						"amazonaws",
+						"com"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"auth",
+						"me"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/auth/login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "sakibnm@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "alu123",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "ec2-3-91-77-16.compute-1.amazonaws.com:3000/api/auth/login",
+					"host": [
+						"ec2-3-91-77-16",
+						"compute-1",
+						"amazonaws",
+						"com"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/auth/logout",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "ec2-3-91-77-16.compute-1.amazonaws.com:3000/api/auth/logout",
+					"host": [
+						"ec2-3-91-77-16",
+						"compute-1",
+						"amazonaws",
+						"com"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"auth",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/note/post",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-access-token",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjYWFjNGZjNjVhYzdjMGNjYzE4ZTJiOCIsImlhdCI6MTU1NDY5NTQyMCwiZXhwIjoxNTU0NzgxODIwfQ.zyJHzpA64aj2UkiyD-EqeHHOURLO7-tKg-AAds23mHY"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "text",
+							"value": "five",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "ec2-3-91-77-16.compute-1.amazonaws.com:3000/api/note/post",
+					"host": [
+						"ec2-3-91-77-16",
+						"compute-1",
+						"amazonaws",
+						"com"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"note",
+						"post"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/note/get",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-access-token",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjYWI3ZTc0ZDQ2ZWQ3MGNmNDA5NzY3NCIsImlhdCI6MTU1NDc0Mjk0NywiZXhwIjoxNTU0ODI5MzQ3fQ.jFaGmq9k7fmY-c8426XY3cpjNkKMvbrGEpMvmpYmVBI"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "id",
+							"value": "5cab7ec2d46ed70cf4097676",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "ec2-3-91-77-16.compute-1.amazonaws.com:3000/api/note/get",
+					"host": [
+						"ec2-3-91-77-16",
+						"compute-1",
+						"amazonaws",
+						"com"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"note",
+						"get"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/note/getall",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-access-token",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjYWJkNDljZDQ2ZWQ3MGNmNDA5NzY4MyIsImlhdCI6MTU1NDc2NDk1NiwiZXhwIjoxNTU0ODUxMzU2fQ.l1HbIMt2enpUCQTRbrrzsexX90juSF4N0YuK-YOKu0Y"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "ec2-3-91-77-16.compute-1.amazonaws.com:3000/api/note/getall",
+					"host": [
+						"ec2-3-91-77-16",
+						"compute-1",
+						"amazonaws",
+						"com"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"note",
+						"getall"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/note/delete",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-access-token",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjYWJkNDljZDQ2ZWQ3MGNmNDA5NzY4MyIsImlhdCI6MTU1NDc2NDk1NiwiZXhwIjoxNTU0ODUxMzU2fQ.l1HbIMt2enpUCQTRbrrzsexX90juSF4N0YuK-YOKu0Y"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "ec2-3-91-77-16.compute-1.amazonaws.com:3000/api/note/delete?msgId=5cac0b03aeb87905a867a7e7",
+					"host": [
+						"ec2-3-91-77-16",
+						"compute-1",
+						"amazonaws",
+						"com"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"note",
+						"delete"
+					],
+					"query": [
+						{
+							"key": "msgId",
+							"value": "5cac0b03aeb87905a867a7e7"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
